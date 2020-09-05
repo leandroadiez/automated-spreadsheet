@@ -1,0 +1,72 @@
+.spinspinspin{
+    animation-name: spin;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(720deg);
+    }
+} 
+.shake {
+	animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+@keyframes shake {
+	10%, 90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%, 80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%, 50%, 70% {
+		transform: translate3d(-3px, 0, 0);
+	}
+
+	40%, 60% {
+		transform: translate3d(3px, 0, 0);
+	}
+}
+.tableHidden{
+    display: none;
+}
+.tableVisible{
+    display: block;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url("../images/icons/dark-diagonal-stripes.png");
+}
+
+.camposAgregados{
+		
+		width: 100%;
+		font: 400 13.3333px Arial;
+}
+#idGrabarJSON{
+	background: #FFF url(../img/boton1.gif) no-repeat;
+    color: #000;
+    text-align: center;
+	margin-left: 5px;
+	box-sizing: border-box;
+	appearance: push-button;
+    user-select: none;
+    white-space: pre;
+	align-items: flex-start;
+	padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+	border-image: initial;
+	font: 400 13.3333px Arial;
+    font-weight: bold;
+}
+
+

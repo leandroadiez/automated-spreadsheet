@@ -1,0 +1,37 @@
+{
+    "name": "Temperies Spreadsheet Automation",
+    "description": "Automates your weekly report's spreadsheet",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "icons": {
+        "16": "./images/icons/temperies16.png",
+        "32": "./images/icons/temperies32.png",
+        "64": "./images/icons/temperies64.png",
+        "128": "./images/icons/temperies128.png"
+    },
+    "browser_action": { 
+        "default_popup": "./HTML/popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "http://reportehoras.temperies.com.ar/*",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://reportehoras.temperies.com.ar/filtros.php"
+            ],
+            "css": ["./CSS/mystyles.css"],
+            "js": ["./JS/filtroHoras.js"]
+        },
+        {
+            "matches": [
+                "http://reportehoras.temperies.com.ar/reporteHoras.php"
+            ],
+            "css": ["./CSS/mystyles.css"],
+            "js": ["./JS/reporteHoras.js"]
+        }
+    ]
+    
+}
