@@ -1,56 +1,8 @@
-function getDate(){
-    var lastWeek = getLastWeek();
-    var lastWeekMonth = lastWeek.getMonth() + 1;
-    var lastWeekDay = lastWeek.getDate();
-    var lastWeekYear = lastWeek.getFullYear();
-    var lastWeekDisplayPadded = ("0000" + lastWeekYear.toString()).slice(-4) + "/" + ("00" + lastWeekMonth.toString()).slice(-2) + "/" + ("00" + lastWeekDay.toString()).slice(-2);
-    return lastWeekDisplayPadded;
-}
-function getLastWeek() {
-    var today = new Date();
-    var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
-    return lastWeek;
-}
-function getCurrentDate(){
-    return new Date(today.getFullYear(), today.getMonth(), today.getDate());
-}
-function multipleSelector(){
-    document.getElementById('lista1[]').value = 1;
-    document.querySelector('#Button3').click();
-    document.getElementById('lista1[]').value = 3;
-    document.querySelector('#Button3').click();
-    document.getElementById('lista1[]').value = 4;
-    document.querySelector('#Button3').click();
-    document.getElementById('lista1[]').value = 5;
-    document.querySelector('#Button3').click();
-    document.getElementById('lista1[]').value = 6;
-    document.querySelector('#Button3').click();
-    document.getElementById('lista1[]').value = 8;
-    document.querySelector('#Button3').click();
-    document.getElementById('lista1[]').value = 11;
-    document.querySelector('#Button3').click();
-}
-
-const fillFields = document.createElement('button');
-fillFields.innerText = "Completar";
-fillFields.id = "fillFields"
-document.querySelector('#id_usuario').appendChild(fillFields);
-
 const exportar = document.createElement('button');
 exportar.innerText = "Exportar JSON";
 exportar.id = 'exportar';
 document.querySelector('#id_usuario').appendChild(exportar);
 
-
-fillFields.addEventListener('click', () => {
-    document.querySelector('#fechaDesde').value = getDate();
-    document.querySelector('#selCentroDeCosto').value = 1;
-    document.querySelector('#selUsuario').value = "ldiez";
-    multipleSelector();
-    document.querySelector('#fechaHasta').value = getCurrentDate();
-    // Hasta aca funciona
-
-});
 exportar.addEventListener('click', () => {
     //var values = [],
     keys = Object.keys(localStorage),
@@ -144,7 +96,7 @@ exportar.addEventListener('click', () => {
     }
 
 
-    let filename = 'daleloco';
+    let filename = 'planillaTemperies';
     var downloadLink;
     var dataType = 'application/vnd.ms-excel';
     var tableSelect = document.getElementById('myTable');
@@ -177,7 +129,4 @@ exportar.addEventListener('click', () => {
 
     // let xd = JSON.parse(localStorage.getItem(1599142539067));
     // console.log(JSON.stringify(xd.Modulo));
-    
-
-    // Copy paste export function
 });
