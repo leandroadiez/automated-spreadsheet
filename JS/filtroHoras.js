@@ -1,3 +1,5 @@
+// No anda el export porque algo pasa con el getDate
+
 function getDate(){
     var lastWeek = getLastWeek();
     var lastWeekMonth = lastWeek.getMonth() + 1;
@@ -144,7 +146,7 @@ exportar.addEventListener('click', () => {
     }
 
 
-    let filename = 'daleloco';
+    let filename = 'planillaTemperies';
     var downloadLink;
     var dataType = 'application/vnd.ms-excel';
     var tableSelect = document.getElementById('myTable');

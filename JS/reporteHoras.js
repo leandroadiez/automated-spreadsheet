@@ -8,7 +8,8 @@ function init(){
     addComplejidad();
     addDeploys();
     addTiempoEstimado();
-    addGrabarJSON();
+    //addGrabarJSON();
+    document.querySelector("#grabar").addEventListener('click', setJSON);
     document.getElementsByClassName('logo')[0].classList.add('spinspinspin');
 }
 
@@ -39,6 +40,7 @@ function addAsignado(){
     document.querySelector('#divLeft').appendChild(asignado);
     //document.querySelector('#divLeft').appendChild(linebreak);
 }
+// addGrabarJSON no se usa
 function addGrabarJSON(){
     let grabarJSON = document.createElement('button');
     grabarJSON.id = 'idGrabarJSON';
