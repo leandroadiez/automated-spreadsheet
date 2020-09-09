@@ -14,16 +14,14 @@ function init(){
 }
 
 
-// COMPONENTS ADDED BY TEMPERIES SPREADSHEET AUTOMATION
+// COMPONENTS ADDED
 function addLabelAgregados(){
     const labelAgregados = document.createElement('h4');
-    labelAgregados.innerText = 'Campos agregados por Temperies Spreadsheet Automation:';
+    labelAgregados.innerText = 'Campos agregados:';
     document.querySelector('#divLeft').appendChild(labelAgregados);
     document.querySelector('#divLeft').appendChild(linebreak);
 }
 function addAsignado(){
-    console.log("Agregando asignado");
-
     const divAsignado = document.createElement('div');
     const asignado = document.createElement('input');
     const labelAsignado = document.createElement('label');
@@ -49,8 +47,6 @@ function addGrabarJSON(){
     grabarJSON.addEventListener('click', setJSON);
 }
 function addComplejidad(){
-    console.log("Agregando extra fields");
-
     const divComplejidad = document.createElement('div');
     const labelComplejidad = document.createElement('label');
     const selectComplejidad = document.createElement('select');
@@ -87,8 +83,6 @@ function addComplejidad(){
     //document.querySelector('#divLeft').appendChild(linebreak);
 }
 function addDeploys(){
-    console.log("Agregando deploys");
-
     const divDeploys = document.createElement('div');
     const cantDeploys = document.createElement('input');
     const labelDeploys = document.createElement('label');
@@ -106,8 +100,6 @@ function addDeploys(){
     document.querySelector('#divLeft').appendChild(linebreak);
 }
 function addTiempoEstimado(){
-    console.log("Agregando tiempo estimado");
-
     const divTiempoEstimado = document.createElement('div');
     const tiempoEstimado = document.createElement('input');
     const labelTiempoEstimado = document.createElement('label');
@@ -182,7 +174,6 @@ function setJSON(){
     //Falta hacer que incluya TODOS los campos que se ingresaron en la tarea
     var clave = Date.now();
     //console.log(clave);
-
     var tareaNueva = {
         ProductoCliente : getProductoCliente(),
         Modulo : getModulo(),
@@ -195,8 +186,8 @@ function setJSON(){
         Deploys : getDeploys(),
         TiempoEstimado : getTiempoEstimado()
     }
-    
     localStorage.setItem(clave, JSON.stringify(tareaNueva));
+
     //console.log(JSON.parse(localStorage.getItem(clave)));
 
 

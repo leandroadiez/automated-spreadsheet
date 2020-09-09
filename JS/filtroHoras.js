@@ -17,7 +17,7 @@ exportar.addEventListener('click', () => {
     let tabla = document.createElement("table");
     tabla.id = 'myTable';
     document.body.appendChild(tabla);
-    //document.getElementById('myTable').classList.add('tableHidden');
+    document.getElementById('myTable').classList.add('tableHidden');
 
     for(let j=0; j<keys.length; j++){
         let task = JSON.parse(localStorage.getItem(keys[j]));
@@ -83,7 +83,7 @@ exportar.addEventListener('click', () => {
         tr.appendChild(th);
         //Tiempo de Tarea (n. de deploy * tiempo estimado)
         th = document.createElement("th");
-        thTexto = document.createTextNode("");
+        thTexto = document.createTextNode(task.Deploys * task.TiempoEstimado);
         th.appendChild(thTexto);
         tr.appendChild(th);
         //Tiempo Estimado

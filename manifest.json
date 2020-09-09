@@ -1,6 +1,6 @@
 {
-    "name": "Temperies Spreadsheet Automation",
-    "description": "Automates your weekly report's spreadsheet",
+    "name": "Temperies - Planilla semanal",
+    "description": "Exporta una planilla idéntica a la de One Drive",
     "version": "0.1.0",
     "manifest_version": 2,
     "icons": {
@@ -13,7 +13,6 @@
         "default_popup": "./HTML/popup.html"
     },
     "permissions": [
-        "tabs",
         "http://reportehoras.temperies.com.ar/*",
         "storage"
     ],
